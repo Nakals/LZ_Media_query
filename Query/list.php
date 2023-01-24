@@ -23,6 +23,8 @@ if($result->num_rows > 0){
     $dompdf->setPaper('A4', 'landscape');
     $dompdf->render();
     echo base64_encode($dompdf->output());
+
+    header('Access-Control-Allow-Origin: *');
     
     http_response_code(200);     
 }else{     
