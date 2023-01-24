@@ -4,6 +4,7 @@ $('document').ready(function(){
     });
     $('.bg, .close_form').on('click',function(){
         $('.modal_wrapper').hide();
+        $('.added_succes').removeClass('show');
     });
 
     $('form.form_wrapper input').on('input', function(){
