@@ -168,7 +168,8 @@ form.get_data {
 }
 .added_succes{
     display: none;
-    color: lightgreen;
+    color: rgb(7, 108, 7);
+    margin: -10px 0 10px;
 }
 
 .added_succes.show{
