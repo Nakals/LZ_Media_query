@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^person$ person.php [NC,L]
+RewriteRule ^list$ list.php [NC,L]

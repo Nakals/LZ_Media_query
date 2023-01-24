@@ -166,3 +166,11 @@ form.get_data {
     margin-top: 10px;
     cursor: pointer;
 }
+.added_succes{
+    display: none;
+    color: lightgreen;
+}
+
+.added_succes.show{
+    display: block;
+}

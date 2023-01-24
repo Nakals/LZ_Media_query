@@ -7,15 +7,15 @@ $('document').ready(function(){
     });
 
     $('form.form_wrapper input').on('input', function(){
+        $('.added_succes').removeClass('show');
         $(this).next('.error').remove();
+
     });
     
     $('form.form_wrapper').submit(function(e) {
         e.preventDefault();
-
         var name = $('form.form_wrapper input[name=name]').val();
         var surname = $('form.form_wrapper input[name=surname]').val();
-        console.log(surname);
         var valid_regular = /^[a-zA-Zа-яА-Я]+$/;
         var valid = false;
         if(name.length > 2 && name != '' && valid_regular.test(name)){
@@ -43,9 +43,8 @@ $('document').ready(function(){
                 type: 'POST',
                 url: 'https://www.contentimo.com/lzmedia/Query/person',
                 data: data,
-                // contentType: "text/html; charset=utf-8",
-                success: function(data) {
-                }
+            }).done(function(){
+                    $('.added_succes').addClass('show');
             });
             $('form.form_wrapper input').val('');
         }
@@ -57,7 +56,6 @@ $('document').ready(function(){
             type: 'POST',
             url: 'https://www.contentimo.com/lzmedia/Query/list',
         }).done(function(data){
-                console.log(data);
                 const linkSource = `data:application/pdf;base64,${data}`;
                 const downloadLink = document.createElement("a");
                 downloadLink.href = linkSource;
