@@ -175,3 +175,14 @@ form.get_data {
 .added_succes.show{
     display: block;
 }
+
+@media (max-width: 991px){
+    form.get_data, .add_btn {
+        width: 70%;
+    }
+
+@media (max-width: 448px){
+    form.get_data, .add_btn {
+        width: 90%;
+    }
+}
