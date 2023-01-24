@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Микросервис электронная очередь</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <section id="service">
+        <div class="container">
+            <div class="row">
+                <div class="btn_wrapper">
+                    <button class="add_btn">
+                        Добавления человека в очередь
+                    </button>
+                    <form action="" class="get_data" method="POST">
+                        <button class="get_btn">
+                            Получение списка людей в очереди
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal_wrapper" style="display: none;">
+            <div class="bg"></div>
+            <form action="" class="form_wrapper" method="POST">
+                <div class="close_form">
+                    <img src="image/cross.svg" alt="close">
+                </div>
+                <div class="header_form">
+                    <h2>Введите данные пользователя</h2>
+                </div>
+                <div class="form_item">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" placeholder="Введите имя пользователя" required>
+                </div>
+                <div class="form_item">
+                    <label for="surname">Фамилия</label>
+                    <input type="text" name="surname" placeholder="Введите фамилию пользователя" required>
+                </div>
+                <button class="">Добавить</button>
+            </form>
+        </div>
+    </section>
+    <script   src="https://code.jquery.com/jquery-3.6.1.min.js"   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="   crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

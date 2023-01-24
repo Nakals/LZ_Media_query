@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#service {
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    height: 100%;
+}
+
+.row {
+    height: 100%;
+}
+
+.btn_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+form.get_data {
+    width: 30%;
+}
+
+.get_btn {
+    width: 100%;
+}
+
+.add_btn {
+    width: 30%;
+}
+
+.add_btn,
+.get_btn {
+    position: relative;
+    padding: 120px 35px 25px;
+    background: #fff;
+    border: 2px solid #4d1bbc;
+    border-radius: 30px;
+    display: block;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.add_btn:hover,
+.get_btn:hover {
+    background: #4d1bbc;
+    color: #fff;
+}
+
+.btn_wrapper button:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat !important;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .4s ease;
+}
+
+.add_btn:before {
+    background-image: url(../image/person.svg);
+}
+
+.get_btn:before {
+    background-image: url(../image/file.svg);
+}
+
+.add_btn:hover:before {
+    background-image: url(../image/person_w.svg);
+}
+
+.get_btn:hover:before {
+    background-image: url(../image/file_w.svg);
+}
+
+.modal_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_wrapper {
+    background: #fff;
+    z-index: 2;
+    padding: 30px 50px;
+    border-radius: 30px;
+    width: 35%;
+    position: relative;
+}
+
+.close_form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header_form h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form_wrapper label,
+.form_wrapper input {
+    display: block;
+    width: 100%;
+}
+
+.form_wrapper input {
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: 2px solid #4d1bbc;
+    outline: none !important;
+}
+
+.form_item label {
+    margin-bottom: 10px;
+}
+
+.form_wrapper .form_item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.form_wrapper button {
+    padding: 15px 35px;
+    border-radius: 30px;
+    border: none;
+    background: #4d1bbc;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
